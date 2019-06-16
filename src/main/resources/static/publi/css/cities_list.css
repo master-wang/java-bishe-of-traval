@@ -1,0 +1,52 @@
+.citys_box{
+    width: 100%;
+    height: auto;
+}
+.cities_left{
+    width: 20%;
+    height: 200px;
+    margin-left: 10px;
+    padding: 20px;
+    float: left;
+    background: rgb(238,238,238);
+}
+.cities_right{
+    width: 70%;
+    margin-left: 10px;
+    padding: 50px;
+    float: left;
+    background: rgb(238,238,238);
+}
+.cities_right .sight{
+    width: 300px;
+    float: left;
+    margin-left: 10px;
+}
+.cities_right span{
+    margin-left: 10px;
+}
+.cities_right p{
+    text-indent: 2em;
+}
+/* .cities_right .sel{
+    background-image: url('../imgs/sel.png');
+    background-color: 100% 100%;
+}
+.cities_right .seled{
+    background-image: url('../imgs/seled.png');
+    background-color: 100% 100%;
+} */
+.cities_right .shoucang{
+    cursor: pointer;
+    display: block;
+    margin-right: 30px;
+    float: right;
+    width: 20px;
+    height: 20px;
+}
+.cities_right .shoucang img{
+    cursor: pointer;
+    display: block;
+    width: 20px;
+    height: 20px;
+}

@@ -1,0 +1,14 @@
+#myModal .modal-content h4{
+    display: inline-block;
+    margin-left: 30px;
+    cursor: pointer;
+}
+#myModal  label{
+    display: block;
+    margin-left: 30px;
+
+}
+#myModal  input{
+   color:rgb(255,157,0);
+
+}

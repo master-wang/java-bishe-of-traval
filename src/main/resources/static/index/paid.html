@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>支付页面</title>
+</head>
+<body>
+<!--<div id="box"></div>-->
+<form name="punchout_form" method="post" action="https://openapi.alipaydev.com/gateway.do?charset=utf-8&method=alipay.trade.page.pay&sign=b%2BFrCjkJ5%2FZeXmeVE%2B8Ep5QNs%2FcdwVxnwv%2F1EbRFYB4cnEyhqeIzSDAdWclnXX5KkUzNAkP95QylKSQcnD2qWVw9DUsp%2Fx%2FFdbg8XkygP7cG0NgbLv7IfDswg3sYvDS8FhD4jNjgwNA2OjSJw8pepYQ3XXJWidbG6uPRy5mniuh6Ie0jFdpByb28C07jzNXt7M5PGvaohTYlsi%2BrKg6Jm%2F7pQYXWSekU%2Fx5o9Zn4j6S0ex58kxGkr1%2FiqPo2WMCLgoMuS83gh6d2eLXgJSqtsvhmWkKCbrk9XS4%2FX3XE4hdAETbk8k9Vf%2B27%2F6OcYDXWPZGSCyYjaOsW6RbzX1bHrQ%3D%3D&return_url=http%3A%2F%2Flocalhost%3A8080%2FAlipayTest%2Freturn.jsp&notify_url=http%3A%2F%2Flocalhost%3A8080%2FAlipayTest%2Fnotify_url.jsp&version=1.0&app_id=2016081600256970&sign_type=RSA2&timestamp=2019-04-03+14%3A23%3A41&alipay_sdk=alipay-sdk-java-3.7.4.ALL&format=json">
+    <input type="hidden" name="biz_content" value="{&quot;out_trade_no&quot;:&quot;256101104334211559994994869&quot;,&quot;total_amount&quot;:&quot;50&quot;,&quot;subject&quot;:&quot;xx景点门票&quot;,&quot;body&quot;:&quot;该xx景点是xx省xx市的5A级景区，该景区是xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx&quot;,&quot;product_code&quot;:&quot;FAST_INSTANT_TRADE_PAY&quot;}">
+    <input type="submit" value="立即支付" style="display:none" >
+</form>
+<script>document.forms[0].submit();</script>
+</body>
+
+<!--<script>-->
+    <!--function getParam(paramName) {-->
+        <!--paramValue = "", isFound = !1;-->
+        <!--if (this.location.search.indexOf("?") == 0 && this.location.search.indexOf("=") > 1) {-->
+            <!--arrSource = unescape(this.location.search).substring(1, this.location.search.length).split("&"), i = 0;-->
+            <!--while (i < arrSource.length && !isFound) arrSource[i].indexOf("=") > 0 && arrSource[i].split("=")[0].toLowerCase() == paramName.toLowerCase() && (paramValue = arrSource[i].split("=")[1], isFound = !0), i++-->
+        <!--}-->
+        <!--return paramValue == "" && (paramValue = null), paramValue-->
+    <!--}-->
+    <!--//var paidInfo = getParam('paidInfo');-->
+    <!--var paidInfo =  window.localStorage.getItem("paidInfo");-->
+    <!--console.log(paidInfo)-->
+    <!--document.getElementById('box').innerHTML = paidInfo;-->
+<!--</script>-->
+</html>

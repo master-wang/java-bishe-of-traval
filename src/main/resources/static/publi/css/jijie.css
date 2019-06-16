@@ -1,0 +1,96 @@
+.contain {
+
+    height: 500px;
+    margin: 50px auto;
+}
+ 
+.contain li {
+    float: left;
+    list-style: none;
+    width: 200px;
+    height:500px;
+    transition: all 1s;
+    position: relative;
+    overflow: hidden;
+    border-left: 2px solid rgba(255, 255, 255, .8);
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.8);
+}
+.contain li img{
+    width: 100%;
+    height: 400px;
+}
+.contain ul:hover li {
+    width: 80px;
+}
+ 
+.contain ul li:hover {
+    width: 70%;
+}
+.contain ul li:hover img{
+    width: 100%;
+    height: 400px;
+}
+ 
+.contain li .title {
+    position: absolute;
+    width: 100%;
+    height: 200px;
+    background-color: rgba(0, 0, 0, .5);
+    text-indent: 2em;
+    line-height: 50px;
+    bottom: 0px;
+    left: 0
+}
+ 
+.contain a {
+    color: #fff;
+    text-decoration: none;
+}
+/* 手机端 */
+@media only screen and (max-width: 1277px) {
+    .contain {
+        width: 50%;
+        height: 400px;
+        margin: 50px auto;
+    }
+     
+    .contain li {
+        float: left;
+        list-style: none;
+        width: 80px;
+        height:400px;
+        transition: all 1s;
+        position: relative;
+        overflow: hidden;
+        border-left: 2px solid rgba(255, 255, 255, .8);
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.8);
+    }
+    
+    .contain ul:click li {
+        width: 80px;
+    }
+     
+    .contain ul li:click {
+        width: 200px;
+    }
+    .contain ul li:click img{
+        width: 200px;
+        height: 400px;
+    }
+     
+    .contain li .title {
+        position: absolute;
+        width: 100%;
+        height: 200px;
+        background-color: rgba(0, 0, 0, .5);
+        text-indent: 2em;
+        line-height: 50px;
+        bottom: 0px;
+        left: 0
+    }
+     
+    .contain a {
+        color: #fff;
+        text-decoration: none;
+    }
+}

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="../publi/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="./css/admin.css">
+    <link rel="icon" href="../publi/imgs/favicon.ico"  type="image/x-icon">
+    <script src='../publi/js/jquery.js'></script>
+    <script src="../publi/js/bootstrap.js"></script>
+    <script src="../publi/js/vue.js"></script>
+    <script src="../publi/js/vue-router.js"></script>
+    <script src="../publi/js/vue-resource.js"></script>
+    <script src="../publi/js/axios.js"></script>
+    <script src="./js/admin.js"></script>
+    <title>后台管理首页</title>
+</head>
+<body>
+    <div id="app">
+        <!-- 导航栏 -->
+        <nav class="navbar navbar-default navbar-inverse">
+            <div class="container-fluid">
+            <div class="navbar-header">
+            <router-link class="navbar-brand" to='/'>后台管理系统</router-link>
+            </div>    
+            <ul class="nav navbar-nav navbar-right">
+                
+                <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">管理员：{{user.name}} <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                    <li><a href="../index/index.html">退出系统</a></li>
+                    
+                </ul>
+                </li>
+            </ul>
+            </div>
+        </nav>
+
+        <!-- //中部大信息 -->
+        <div class="row">
+                <!-- //左侧导航的菜单 -->
+                <div class="col-md-2">
+                    <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+
+                    <div class="panel panel-primary">
+                    <div class="panel-heading navbar-inverse" role="tab" id="headingOne">
+                        <h4 class="panel-title">
+                        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            用户管理
+                        </a>
+                        </h4>
+                    </div>
+                    <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                            <div class="list-group">
+                                <router-link  class="list-group-item" to='/usersList'>用户列表</router-link>
+                            </div>
+                    </div>
+                    </div>
+
+
+                    <div class="panel panel-primary">
+                    <div class="panel-heading" role="tab" id="headingTwo">
+                        <h4 class="panel-title">
+                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        轮播图管理
+                        </a>
+                        </h4>
+                    </div>
+                    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                        <div class="list-group">
+                                <router-link  class="list-group-item" to='/roudImgs'>轮播图发布</router-link>
+                        </div>
+                    </div>
+                    </div>
+
+
+                    <div class="panel panel-primary">
+                    <div class="panel-heading" role="tab" id="headingThree">
+                        <h4 class="panel-title">
+                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        旅游景点管理
+                        </a>
+                        </h4>
+                    </div>
+                    <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                        <div class="list-group">
+                                <router-link  class="list-group-item" to='/toursList'>旅游景点列表</router-link>
+                                <router-link  class="list-group-item" to='/tourAdd'>旅游景点添加</router-link>
+                        </div>
+                    </div>
+                    </div>
+                    
+                    
+
+                    <div class="panel panel-primary">
+                        <div class="panel-heading" role="tab" id="headingSix">
+                            <h4 class="panel-title">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                                评论管理
+                            </a>
+                            </h4>
+                        </div>
+                        <div id="collapseSix" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSix">
+                            <div class="list-group">
+                                <router-link  class="list-group-item" to='/commentsList'>评论查看</router-link>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+
+                </div>
+
+                <!--右侧信息展示 -->
+                <div class="col-md-10">
+                    <router-view></router-view>
+                    <router-view name="delete"></router-view>
+                    <router-view name="upadate"></router-view>
+                </div>
+        </div>
+        <!-- footer -->
+        <div class="footer">
+            版权所有 © 二八达驴网  <a href="http://www.xiyou.edu.cn/" target="_blank">西安邮电大学</a>/<a href="http://acat.xupt.edu.cn/" target="_blank">ACAT实验室</a>/<a href="http://119.23.220.225/" target="_blank">ACAT群博网</a>/<a href="http://111.230.128.231/" target="_blank">JOIN ACAT</a>
+        </div>
+    </div>
+</body>
+</html>
